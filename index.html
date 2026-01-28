@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المنتجات - لوحة تحكم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="crud">
+        <div class="head">
+            <h2>إدارة المنتجات</h2>
+            <p>نظام متكامل لتخزين ومتابعة المنتجات</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="productName" placeholder="اسم السلعة" required>
+            
+            <div class="price-inputs">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="السعر" required min="0">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="الخصم" min="0" value="0">
+                <small id="total"></small>
+            </div>
+            
+            <input type="number" id="count" placeholder="العدد" required min="1" value="1">
+            
+            <button id="submit">إضافة المنتج</button>
+        </div>
+        
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="ابحث بالاسم">
+            </div>
+            
+            <div id="deleteAllBtnContainer">
+                </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>اسم السلعة</th>
+                        <th>السعر</th>
+                        <th>الخصم</th>
+                        <th>العدد</th>
+                        <th>الحساب (الإجمالي)</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
