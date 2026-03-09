@@ -1,0 +1,77 @@
+body{
+    background:#f4f7f6;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+}
+
+/* Transitions عامة */
+input, button, #total {
+    transition: all 0.3s ease;
+}
+
+/* Inputs */
+.inputs input{
+    margin-bottom: 0.5rem;
+}
+
+.inputs input:focus, #search:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+/* Total */
+#total{
+    min-width: 70px;
+    text-align: center;
+}
+
+/* Buttons hover */
+button{
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+/* Delete All button */
+#deleteAllBtnContainer button{
+    background:#dc3545;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+#deleteAllBtnContainer button:hover{
+    background:#c82333;
+    transform: scale(1.05);
+}
+
+/* Table hover effect */
+.table tbody tr:hover{
+    background-color: rgba(0,123,255,0.1);
+    transition: all 0.3s;
+}
+
+/* Action buttons */
+.table-button{
+    padding:6px 10px;
+    border-radius:4px;
+    border:none;
+    cursor:pointer;
+    font-size:0.9em;
+    transition: all 0.3s;
+    color:white;
+}
+
+.table-button.update{
+    background:#ffc107;
+}
+
+.table-button.delete{
+    background:#dc3545;
+}
+
+.table-button:hover{
+    transform: scale(1.05);
+    opacity:0.8;
+}
